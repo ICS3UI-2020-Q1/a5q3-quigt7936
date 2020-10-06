@@ -1,15 +1,23 @@
+import java.util.Scanner;
 /**
- *
- * @author 
+ * This program gives the factoral of a given number
+ * @author Thomas Quigley
  */
 public class Main {
-
-  /**
-   * The method that is executed when you hit the run button.
-   * @param args the command line arguments
-   */
   public static void main(String[] args) {
-    // TODO code application logic here
-    
+    Scanner input = new Scanner(System.in);
+    // get the users number
+    System.out.println("Please enter an integer to calculate the factorial of");
+    int userNumber = input.nextInt();
+
+    // initiliaze the product variable, it starts at 1 so if the number is 0 the product will be 1
+    int product = 1;
+
+    // a for loop that repeats from the userNumber to 0
+    for (int i = userNumber; i > 0; i--) {
+      product = product * i;
+    }
+    // tell the user their factorial
+    System.out.println(userNumber + "! = " + product);
   }
 }
